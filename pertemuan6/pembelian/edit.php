@@ -1,4 +1,3 @@
-
 <?php
 require_once '../dbkoneksi.php';
 
@@ -9,10 +8,10 @@ $sql = $dbh->query($edit);
 $row = $sql->fetch();
 }
 ?>
-<div class="content-wrapper bg-info"">
+<div class="content-wrapper bg-info">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid>
+      <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6 mb-2">
             <h1 class="m-0">Edit</h1>

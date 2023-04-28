@@ -11,7 +11,7 @@ require_once '../dbkoneksi.php'
     $row = $st->fetch();
 ?>
 
-<table>
+<table class="table table-striped">
             <tbody>
         <tr>  <td>Tanggal : </td><td><?=$row['tanggal']?></td></tr>
         <tr>  <td>Nomor : </td><td><?=$row['nomor']?></td></tr>

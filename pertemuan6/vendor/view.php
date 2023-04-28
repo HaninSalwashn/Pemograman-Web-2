@@ -9,7 +9,7 @@ require_once '../dbkoneksi.php'
     $row = $st->fetch();
 ?>
 
-<table>
+<table class="table table-striped">
             <tbody>
         <tr>  <td>Nomor : </td><td><?=$row['nomor']?></td></tr>
         <tr>  <td>Nama : </td><td><?=$row['nama']?></td></tr>

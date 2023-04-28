@@ -1,13 +1,14 @@
 <?php
 require_once '../dbkoneksi.php';
 ?>
+
 <?php
 $sql = "SELECT * FROM vendor";
 $rs = $dbh->query($sql);
 ?>
 
 <a class="btn btn-success" href="create.php" role="button">Tambah Vendor</a>
-<table class="table" width="100%" border="1" cellspacing="2" cellpadding="2">
+<table class="table table-striped" width="100%" border="1" cellspacing="2" cellpadding="2">
     <thead>
         <tr>
             <th>No</th>
@@ -32,7 +33,9 @@ $rs = $dbh->query($sql);
                 <td>
                     <a class="btn btn-primary" href="view.php?id=<?= $row['id'] ?>">View</a>
                     <a class="btn btn-primary" href="edit.php?idedit=<?= $row['id'] ?>">Edit</a>
-                    <a class="btn btn-primary <?= $row['is_pelanggan'] ? 'disabled' : '' ?>" href="delete.php?iddel=<?= $row['id'] ?>" onclick="if(!confirm('Anda Yakin Hapus Data Produk <?= $row['nama'] ?>?')) {return false}">Delete</a>
+                    <a class="btn btn-primary" href="delete.php?iddel=<?=$row['id']?>"
+                onclick="if(!confirm('Anda Yakin Hapus Data Vendor <?=$row['nama']?>?')) {return false}"
+                >Delete</a>
                 </td>
             </tr>
         <?php
@@ -41,3 +44,5 @@ $rs = $dbh->query($sql);
         ?>
     </tbody>
 </table>
+    </div>
+</div>
